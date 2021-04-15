@@ -48,6 +48,7 @@ CREATE TABLE Usuario(
     nombre_y_apellidos VARCHAR(20) not null,
     telefono INTEGER not null, 
     correo VARCHAR(20) not null,
+    contraseña VARCHAR(30) not null,
     edad INTEGER not null,
     direccion VARCHAR(100) not null,
     tipo_usuario VARCHAR(10) not null,                  -- si es ciudadano, controlador o gestor municipal
