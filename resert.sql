@@ -68,10 +68,10 @@ CREATE TABLE FranjaEspacio(
 
 CREATE TABLE Usuario(
     dni VARCHAR(8) not null,
-    nombre_usuario VARCHAR(20) not null,
-    nombre_y_apellidos VARCHAR(50) not null,
+    nombre_usuario VARCHAR(30) not null,
+    nombre_y_apellidos VARCHAR(100) not null,
     telefono INTEGER not null, 
-    correo VARCHAR(20) not null,
+    correo VARCHAR(50) not null,
     contraseña VARCHAR(30) not null,
     edad INTEGER not null,
     direccion VARCHAR(100) not null,
