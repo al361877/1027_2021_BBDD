@@ -75,7 +75,7 @@ CREATE TABLE Usuario(
     contraseña VARCHAR(30) not null,
     edad INTEGER not null,
     direccion VARCHAR(100) not null,
-    tipo_usuario VARCHAR(10) not null,                  -- si es ciudadano, controlador o gestor municipal
+    tipo_usuario VARCHAR(12) not null,                  -- si es ciudadano, controlador o gestor municipal
     CONSTRAINT cp_usuario PRIMARY KEY (dni),
     CONSTRAINT calt1_usuario UNIQUE (telefono),         --clave alternativa 1, será el telefono
     CONSTRAINT calt2_usuario UNIQUE (correo),           --clave alternativa 2, será el correo electrónico
