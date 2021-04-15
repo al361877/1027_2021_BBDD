@@ -39,13 +39,12 @@ CREATE TABLE FranjaEspacio(
     horaIni time not null,
     horaFin time not null, 
     CONSTRAINT cp_franja PRIMARY KEY (id)
-
 );
 
 CREATE TABLE Usuario(
     dni VARCHAR(8) not null,
     nombre_usuario VARCHAR(20) not null,
-    nombre_y_apellidos VARCHAR(20) not null,
+    nombre_y_apellidos VARCHAR(100) not null,
     telefono INTEGER not null, 
     correo VARCHAR(20) not null,
     contraseña VARCHAR(30) not null,
@@ -57,7 +56,6 @@ CREATE TABLE Usuario(
     CONSTRAINT calt2_usuario UNIQUE (correo),           --clave alternativa 2, será el correo electrónico
 --     CONSTRAINT ca_usuario_direccion FOREIGN KEY (direccion) REFERENCES Direccion(id)  ON DELETE RESTRICT ON UPDATE CASCADE, -- clave ajena a dirección, será un identificador de dicha dirección
     CONSTRAINT ri_usuario_telefono CHECK (telefono>600000000 AND telefono<1000000000)  -- regla de integridad (RI)       
-
 );
 
 CREATE TABLE Ciudadano(
@@ -72,17 +70,14 @@ CREATE TABLE Gestor(
     CONSTRAINT ca_gestror_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_gestor PRIMARY KEY (dni),
     CONSTRAINT ca_gestror_munipio FOREIGN KEY (municipio) REFERENCES Municipio(id)  ON DELETE RESTRICT ON UPDATE CASCADE
-
-
 );
+
 CREATE TABLE Controlador(
     dni VARCHAR(8) not null,  
     espacio_publico VARCHAR(20) not null,
     CONSTRAINT ca_controlador_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_controlador PRIMARY KEY (dni),
     CONSTRAINT ca_controlador_espacio FOREIGN KEY (espacio_publico) REFERENCES EspacioPublico(id)  ON DELETE RESTRICT ON UPDATE CASCADE
-
-
 );
 
 CREATE TABLE Zona(
@@ -94,8 +89,6 @@ CREATE TABLE Zona(
     tipo_acceso VARCHAR(30) not null,
     CONSTRAINT cp_zona PRIMARY KEY (id),
     CONSTRAINT ca_zona_espacio FOREIGN KEY (espacio_publico) REFERENCES EspacioPublico(id)  ON DELETE RESTRICT ON UPDATE CASCADE
-
-
 );
 
 CREATE TABLE Reserva(
@@ -111,7 +104,6 @@ CREATE TABLE Reserva(
     CONSTRAINT ca_reserva_espacio FOREIGN KEY (espacio_publico) REFERENCES EspacioPublico(id)  ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT ca_reserva_franja FOREIGN KEY (franja_espacio) REFERENCES FranjaEspacio(id)  ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT ca_reserva_zona FOREIGN KEY (zona) REFERENCES Zona(id)  ON DELETE RESTRICT ON UPDATE CASCADE
-
 );
 
 
@@ -120,7 +112,6 @@ CREATE TABLE Estacion(
     fechaIni date not null,
     fechaFin date not null, 
     CONSTRAINT cp_estacion PRIMARY KEY (id)
-
 );
 
 CREATE TABLE Servicio(
