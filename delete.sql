@@ -7,14 +7,14 @@ delete from Direccion;
 delete from Controlador;
 delete from Ciudadano;
 delete from Gestor;
-delete from Reservar; 
+delete from Reserva; 
 delete from Servicio;
 delete from FranjaEspacio;
 
 --------------------------------------------
 DROP table Servicio;
 DROP table Estacion;
-DROP table Reservar; 
+DROP table Reserva; 
 DROP table Zona;
 DROP table Controlador;
 DROP table Gestor;
