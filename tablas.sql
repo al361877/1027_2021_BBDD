@@ -97,7 +97,7 @@ CREATE TABLE Zona(
 
 );
 
-CREATE TABLE Reservar(
+CREATE TABLE Reserva(
     id VARCHAR(20) not null,
     dni_ciudadano VARCHAR(8) not null,
     franja_espacio VARCHAR(20) not null,
