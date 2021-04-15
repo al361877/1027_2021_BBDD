@@ -1,0 +1,40 @@
+INSERT INTO Usuario VALUES ('A1234509',’gemmen’, ‘GEMMA MENGUAL’, 645456564, ‘gemmen@hotmail.com’, ‘pass’, 33, ‘iddir123456789’, ‘Ciudadano’);
+INSERT INTO Usuario VALUES ('A2345091', ‘gallego’, ‘ALBUSAC TAMARGO DANIEL’, 62345091, ‘gallego@gmail.com’, ‘pass’, 23, ‘iddir1235093', ‘Ciudadano’);
+INSERT INTO Usuario VALUES ('A1345092',‘AVELLANEDA’, ‘CASTELLS GALLEGO MARAI DEL TISCAR’, 61345092, ‘AVELLANEDA@hotmail.com’, ‘pass’, 23, ‘iddir1235054', ‘Ciudadano’);
+INSERT INTO Usuario VALUES ('G1245093',‘AVELLANEDA’, ‘CUETO AVELLANEDA RAFAEL’, 61245093, ‘AVELLANEDA@hotmail.com’, ‘pass’, 43, ‘iddir1235099', ‘Ciudadano’);
+INSERT INTO Usuario VALUES ('R1235094',‘ESCOT’, ‘ESCOT HIGUERAS SANDRA’, 61235094, ‘ESCOT@gmail.com’, ‘pass’, 53, ‘iddir1235094', ‘Ciudadano’);
+
+INSERT INTO Usuario VALUES ('G1245493', ’IBAÑEZ’, ‘GONZALEZ IBAÑEZ DAVID’, 61234095, ‘IBAÑEZ@hotmail.com’, ‘pass’, 33, ‘iddir8234504’, ‘Gestor’);
+INSERT INTO Usuario VALUES ('A1234596', ‘BECERRA‘, ‘ALONSO BECERRA JOSE’, 61234596, ‘BECERRA@hotmail.com’, ‘pass’, 32, ‘iddir1234596’, ‘Gestor’);
+INSERT INTO Usuario VALUES ('I1234508', ‘SEGUIN’, ‘FERNANDEZ SEGUIN HUGO’, 61234508, ‘SEGUIN@gmail.com’, ‘pass’, 37, ‘iddir1234508’, ‘Gestor’);
+INSERT INTO Usuario VALUES ('U2234509', ‘CARREÑO’, ‘CARREÑO NAVARRO MONICA ’, 62234509, ‘CARREÑO@hotmail.com’, ‘pass’, 45, ‘iddir2234509’, ‘Gestor);
+INSERT INTO Usuario VALUES ('A3234509', ‘HERAS’, ‘GARCIA HERAS BEATRIZ ’, 63234509, ‘HERAS@hotmail.com’, ‘pass’, 29, ‘iddir3234509’, ‘Gestor’);
+
+INSERT INTO Usuario VALUES ('H4234509', ‘GARRIDO’, ‘GARRIDO RUIZ LUIS ’, 64234509, ‘GARRIDO@gmail.com’, ‘pass’, 23, ‘iddir4234509,’ ‘Controlador’);
+INSERT INTO Usuario VALUES ('G5234509', ‘CAMBRONERO’, ‘GOMEZ CAMBRONERO MARTA ’, 65234509, ‘@hotmail.com’, ‘pass’, 18,’ iddir5234509’, ‘Controlador’);
+INSERT INTO Usuario VALUES ('F6234509',’gemmen’, ‘LOPEZ GONZALEZ OLGA ’, 66234509, ‘CAMBRONERO@hotmail.com’, ‘pass’, 19’, ‘iddir6234509’, ‘Controlador’);
+INSERT INTO Usuario VALUES ('K7234509', ‘OLGA’, ‘LOPEZ RUEDA ROCIO ’, 67234509, ‘OLGA@gmail.com’, ‘pass’, 40, ‘iddir7234509’, ‘Controlador’);
+INSERT INTO Usuario VALUES ('T8234509', ‘CHAVARRIAS’, ‘MONZON CHAVARRIAS MARINA ’, 68234509, ‘CHAVARRIAS@gmail.com’, ‘pass’, 33, ‘iddir8234509’, ‘Controlador’);
+INSERT INTO Usuario VALUES ('E9234509', ‘OÑA’ , ‘OÑA MORALES MONICA ’, 69234509, ‘OÑA@hotmail.com’, ‘pass’, 46, ‘iddir9234509’, ‘Controlador’);
+
+
+INSERT INTO Ciudadano VALUES ('A1234509');
+INSERT INTO Ciudadano VALUES ('A2345091');
+INSERT INTO Ciudadano VALUES ('A1345092');
+INSERT INTO Ciudadano VALUES ('G1245093');
+INSERT INTO Ciudadano VALUES ('R1235094');
+
+
+INSERT INTO GestorMunicipal VALUES ('G1245493', ‘Castellón’);
+INSERT INTO GestorMunicipal VALUES ('A1234596', ‘Valencia’);
+INSERT INTO GestorMunicipal VALUES ('I1234508', ‘Alicante’’);
+INSERT INTO GestorMunicipal VALUES ('U2234509', ‘Xativa’’);
+INSERT INTO GestorMunicipal VALUES ('A3234509', ‘Náquera’);
+
+
+INSERT INTO Controlador VALUES ('H4234509', ‘’);
+INSERT INTO Controlador VALUES ('G5234509', ‘’);
+INSERT INTO Controlador VALUES ('F6234509', ‘’);
+INSERT INTO Controlador VALUES ('K7234509', ‘’);
+INSERT INTO Controlador VALUES ('T8234509', ‘’);
+INSERT INTO Controlador VALUES ('E9234509', ‘’);
