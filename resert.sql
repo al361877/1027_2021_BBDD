@@ -1,4 +1,25 @@
 
+
+
+CREATE TABLE Municipio(
+    id VARCHAR(20) not null,  
+    nombre VARCHAR(50) not null,
+    coordenadas VARCHAR(10) not null,
+    habitantes int not null,
+    CONSTRAINT cp_municipio PRIMARY KEY (id)
+);
+
+
+CREATE TABLE EspacioPublico(
+    id VARCHAR(20) not null,
+    municipio VARCHAR(20) not null,
+    tipo_espacio VARCHAR(50) not null,
+    cp INTEGER not null,
+    CONSTRAINT cp_espacio PRIMARY KEY (id),
+    CONSTRAINT ca_espacio_munipio FOREIGN KEY (municipio) REFERENCES Municipio(id)  ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+
 CREATE TABLE FranjaEspacio(
     id VARCHAR(50) not null,
     fechaIni date not null,
