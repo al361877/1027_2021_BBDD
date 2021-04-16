@@ -1,56 +1,3 @@
-delete from Municipio;
-delete from EspacioPublico;
-delete from Zona;
-delete from Usuario;
-delete from Estacion;
-delete from Controlador;
-delete from Ciudadano;
-delete from Gestor;
-delete from Reserva; 
-delete from Servicio;
-delete from FranjaEspacio;
-
---------------------------------------------
-DROP table Servicio;
-DROP table Estacion;
-DROP table Reserva; 
-DROP table Zona;
-DROP table Controlador;
-DROP table Gestor;
-DROP table Ciudadano;
-DROP table Usuario;
-DROP table FranjaEspacio;
-DROP table EspacioPublico;
-DROP table Municipio;
-
-------------------------------------------
-CREATE TABLE Direccion(
-    id VARCHAR(20) not null, 
-    cp INTEGER not null, 
-    ciudad VARCHAR(50) not null,
-    calle VARCHAR(100) not null, 
-    CONSTRAINT cp_direccion PRIMARY KEY (id)
-);
-
-
-CREATE TABLE Municipio(
-    id VARCHAR(20) not null,  
-    nombre VARCHAR(50) not null,
-    coordenadas VARCHAR(30) not null,
-    habitantes int not null,
-    CONSTRAINT cp_municipio PRIMARY KEY (id)
-);
-
-
-CREATE TABLE EspacioPublico(
-    id VARCHAR(20) not null,
-    municipio VARCHAR(20) not null,
-    tipo_espacio VARCHAR(50) not null,
-    cp INTEGER not null,
-    CONSTRAINT cp_espacio PRIMARY KEY (id),
-    CONSTRAINT ca_espacio_munipio FOREIGN KEY (municipio) REFERENCES Municipio(id)  ON DELETE RESTRICT ON UPDATE CASCADE
-);
-
 
 CREATE TABLE FranjaEspacio(
     id VARCHAR(50) not null,
@@ -69,8 +16,10 @@ CREATE TABLE Usuario(
     telefono VARCHAR(15) not null, 
     email VARCHAR(50) not null,
     contraseña VARCHAR(30) not null,
-    edad INTEGER not null,
-    direccion VARCHAR(100) not null,
+    nacimiento date not null,
+    ciudad VARCHAR(100) not null,
+    calle VARCHAR(100) not null,
+    cp INTEGER not null,
     tipo_usuario VARCHAR(12) not null,                  -- si es ciudadano, controlador o gestor municipal
     CONSTRAINT cp_usuario PRIMARY KEY (dni),
     CONSTRAINT calt1_usuario UNIQUE (telefono),         --clave alternativa 1, será el telefono
@@ -152,24 +101,24 @@ CREATE TABLE Servicio(
 
 
 
-INSERT INTO Usuario VALUES ('A1234509','gemmen', 'GEMMA MENGUAL', 645456564, 'gemmen@hotmail.com', 'pass', 33, 'iddir123456789', 'Ciudadano');
-INSERT INTO Usuario VALUES ('A2345091', 'gallego', 'ALBUSAC TAMARGO DANIEL', 623845091, 'gallego@gmail.com', 'pass', 23, 'iddir1235093', 'Ciudadano');
-INSERT INTO Usuario VALUES ('A1345092','CASTELLS', 'CASTELLS GALLEGO MARAI DEL TISCAR', 613745092, 'CASTELLS@hotmail.com', 'pass', 23, 'iddir1235054', 'Ciudadano');
-INSERT INTO Usuario VALUES ('G1245093','AVELLANEDA', 'CUETO AVELLANEDA RAFAEL', 612455093, 'AVELLANEDA@hotmail.com', 'pass', 43, 'iddir1235099', 'Ciudadano');
-INSERT INTO Usuario VALUES ('R1235094','ESCOT', 'ESCOT HIGUERAS SANDRA', 614235094, 'ESCOT@gmail.com', 'pass', 53, 'iddir1235094', 'Ciudadano');
+INSERT INTO Usuario VALUES ('A1234509','gemmen', 'GEMMA MENGUAL', 645456564, 'gemmen@hotmail.com', 'pass', 12-3-1994, 'iddir123456789','asdfgas',12345, 'Ciudadano');
+INSERT INTO Usuario VALUES ('A2345091', 'gallego', 'ALBUSAC TAMARGO DANIEL', 623845091, 'gallego@gmail.com', 'pass', 12-3-1994, 'iddir1235093','fghs',6345, 'Ciudadano');
+INSERT INTO Usuario VALUES ('A1345092','CASTELLS', 'CASTELLS GALLEGO MARAI DEL TISCAR', 613745092, 'CASTELLS@hotmail.com', 'pass', 12-3-1994, 'iddir1235054', 'sdgh',7346,'Ciudadano');
+INSERT INTO Usuario VALUES ('G1245093','AVELLANEDA', 'CUETO AVELLANEDA RAFAEL', 612455093, 'AVELLANEDA@hotmail.com', 'pass', 12-3-1994, 'sgsfsdfg', 'asdfgas',5346,'Ciudadano');
+INSERT INTO Usuario VALUES ('R1235094','ESCOT', 'ESCOT HIGUERAS SANDRA', 614235094, 'ESCOT@gmail.com', 'pass', 12-3-1994, 'iddir1235094','dsfgsg',23456, 'Ciudadano');
 
-INSERT INTO Usuario VALUES ('G1245493', 'IBAÑEZ', 'GONZALEZ IBAÑEZ DAVID', 612364095, 'IBAÑEZ@hotmail.com', 'pass', 33, 'iddir8234504', 'Gestor');
-INSERT INTO Usuario VALUES ('A1234596', 'BECERRA', 'ALONSO BECERRA JOSE', 612347596, 'BECERRA@hotmail.com', 'pass', 32, 'iddir1234596', 'Gestor');
-INSERT INTO Usuario VALUES ('I1234508', 'SEGUIN', 'FERNANDEZ SEGUIN HUGO', 612348508, 'SEGUIN@gmail.com', 'pass', 37, 'iddir1234508', 'Gestor');
-INSERT INTO Usuario VALUES ('U2234509', 'CARREÑO', 'CARREÑO NAVARRO MONICA', 622394509, 'CARREÑO@hotmail.com', 'pass', 45, 'iddir2234509', 'Gestor');
-INSERT INTO Usuario VALUES ('A3234509', 'HERAS', 'GARCIA HERAS BEATRIZ', 633234509, 'HERAS@hotmail.com', 'pass', 29, 'iddir3234509', 'Gestor');
+INSERT INTO Usuario VALUES ('G1245493', 'IBAÑEZ', 'GONZALEZ IBAÑEZ DAVID', 612364095, 'IBAÑEZ@hotmail.com', 'pass', 12-3-1994, 'iddir8234504', 'asdfgas',52346,'Gestor');
+INSERT INTO Usuario VALUES ('A1234596', 'BECERRA', 'ALONSO BECERRA JOSE', 612347596, 'BECERRA@hotmail.com', 'pass', 12-3-1994, 'iddir1234596', 'asdfgas',34573,'Gestor');
+INSERT INTO Usuario VALUES ('I1234508', 'SEGUIN', 'FERNANDEZ SEGUIN HUGO', 612348508, 'SEGUIN@gmail.com', 'pass', 12-3-1994, 'iddir1234508', 'asdfgas',3245347,'Gestor');
+INSERT INTO Usuario VALUES ('U2234509', 'CARREÑO', 'CARREÑO NAVARRO MONICA', 622394509, 'CARREÑO@hotmail.com', 'pass', 12-3-1994, 'iddir2234509' ,'asdfgas',234532,'Gestor');
+INSERT INTO Usuario VALUES ('A3234509', 'HERAS', 'GARCIA HERAS BEATRIZ', 633234509, 'HERAS@hotmail.com', 'pass', 12-3-1994, 'iddir3234509' ,'asdfgas',24523,'Gestor');
 
-INSERT INTO Usuario VALUES ('H4234509', 'GARRIDO', 'GARRIDO RUIZ LUIS', 642434509, 'GARRIDO@gmail.com', 'pass', 23, 'iddir4234509', 'Controlador');
-INSERT INTO Usuario VALUES ('G5234509', 'CAMBRONERO', 'GOMEZ CAMBRONERO MARTA', 652634509, '@hotmail.com', 'pass', 18,'iddir5234509', 'Controlador');
-INSERT INTO Usuario VALUES ('F6234509','OLGA', 'LOPEZ GONZALEZ OLGA', 662534509, 'CAMBRONERO@hotmail.com', 'pass', 19, 'iddir6234509', 'Controlador');
-INSERT INTO Usuario VALUES ('K7234509', 'RUEDA', 'LOPEZ RUEDA ROCIO ', 672347509, 'OLGA@gmail.com', 'pass', 40, 'iddir7234509', 'Controlador');
-INSERT INTO Usuario VALUES ('T8234509', 'CHAVARRIAS', 'MONZON CHAVARRIAS MARINA', 682374509, 'CHAVARRIAS@gmail.com', 'pass', 33, 'iddir8234509', 'Controlador');
-INSERT INTO Usuario VALUES ('E9234509', 'OÑA' , 'OÑA MORALES MONICA ', 692344509, 'OÑA@hotmail.com', 'pass', 46, 'iddir9234509', 'Controlador');
+INSERT INTO Usuario VALUES ('H4234509', 'GARRIDO', 'GARRIDO RUIZ LUIS', 642434509, 'GARRIDO@gmail.com', 'pass', 12-3-1994, 'iddir4234509','asdfgas',24523, 'Controlador');
+INSERT INTO Usuario VALUES ('G5234509', 'CAMBRONERO', 'GOMEZ CAMBRONERO MARTA', 652634509, '@hotmail.com', 'pass', 12-3-1994,'iddir5234509' ,'asdfgas',245,'Controlador');
+INSERT INTO Usuario VALUES ('F6234509','OLGA', 'LOPEZ GONZALEZ OLGA', 662534509, 'CAMBRONERO@hotmail.com', 'pass', 12-3-1994, 'iddir6234509','asdfgas',2543523, 'Controlador');
+INSERT INTO Usuario VALUES ('K7234509', 'RUEDA', 'LOPEZ RUEDA ROCIO ', 672347509, 'OLGA@gmail.com', 'pass', 12-3-1994, 'iddir7234509' ,'asdfgas',42352,'Controlador');
+INSERT INTO Usuario VALUES ('T8234509', 'CHAVARRIAS', 'MONZON CHAVARRIAS MARINA', 682374509, 'CHAVARRIAS@gmail.com', 'pass', 12-3-1994, 'iddir8234509' ,'asdfgas',23456,'Controlador');
+INSERT INTO Usuario VALUES ('E9234509', 'OÑA' , 'OÑA MORALES MONICA ', 692344509, 'OÑA@hotmail.com', 'pass', 12-3-1994, 'iddir9234509','asdfgas',24525, 'Controlador');
 
 
 INSERT INTO Ciudadano VALUES ('A1234509');
