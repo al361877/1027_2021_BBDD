@@ -24,17 +24,32 @@ INSERT INTO Ciudadano VALUES ('A1345092');
 INSERT INTO Ciudadano VALUES ('G1245093');
 INSERT INTO Ciudadano VALUES ('R1235094');
 
+INSERT INTO Municipio VALUES('cs', 'Castellón', '39°58′N 0°03′O', 150000);
+INSERT INTO Municipio VALUES('vlc', 'Valencia', '39°28′12″N 0°22′35″O', 2850000);
+INSERT INTO Municipio VALUES('alc', 'Alicante', '38°21′N 0°29′W', 240000);
+INSERT INTO Municipio VALUES('naq', 'Náquera', '39°48′N 0°33′O', 40000);
+INSERT INTO Municipio VALUES('xat', 'Xativa', '39°58′N 0°53′O', 50000);
 
-INSERT INTO GestorMunicipal VALUES ('G1245493', 'Castellón');
-INSERT INTO GestorMunicipal VALUES ('A1234596', 'Valencia');
-INSERT INTO GestorMunicipal VALUES ('I1234508', 'Alicante'');
-INSERT INTO GestorMunicipal VALUES ('U2234509', 'Xativa'');
-INSERT INTO GestorMunicipal VALUES ('A3234509', 'Náquera');
+INSERT INTO Gestor VALUES ('G1245493', 'cs');
+INSERT INTO Gestor VALUES ('A1234596', 'vlc');
+INSERT INTO Gestor VALUES ('I1234508', 'alc');
+INSERT INTO Gestor VALUES ('U2234509', 'xat');
+INSERT INTO Gestor VALUES ('A3234509', 'naq');
+
+INSERT INTO EspacioPublico VALUES('rio1', 'alc', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('rio2', 'alc', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('des4', 'cs', 'otros', 12004);
+INSERT INTO EspacioPublico VALUES('herm3', 'xat', 'otros', 10004);
+INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004);
+INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004);
 
 
-INSERT INTO Controlador VALUES ('H4234509', '');
-INSERT INTO Controlador VALUES ('G5234509', '');
-INSERT INTO Controlador VALUES ('F6234509', '');
-INSERT INTO Controlador VALUES ('K7234509', '');
-INSERT INTO Controlador VALUES ('T8234509', '');
-INSERT INTO Controlador VALUES ('E9234509', '');
+INSERT INTO Controlador VALUES ('H4234509', 'mgd2');
+INSERT INTO Controlador VALUES ('G5234509', 'herm3');
+INSERT INTO Controlador VALUES ('F6234509', 'rio1');
+INSERT INTO Controlador VALUES ('K7234509', 'rio2');
+INSERT INTO Controlador VALUES ('T8234509', 'des4');
+INSERT INTO Controlador VALUES ('E9234509', 'mec2');
+
+
+INSERT INTO FranjaEspacio  VALUES('1', 23/03/2020, 23/03/2020, 9:30, 10:00);
