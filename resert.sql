@@ -3,7 +3,6 @@ delete from EspacioPublico;
 delete from Zona;
 delete from Usuario;
 delete from Estacion;
-
 delete from Controlador;
 delete from Ciudadano;
 delete from Gestor;
@@ -20,10 +19,10 @@ DROP table Controlador;
 DROP table Gestor;
 DROP table Ciudadano;
 DROP table Usuario;
-
 DROP table FranjaEspacio;
 DROP table EspacioPublico;
 DROP table Municipio;
+
 ------------------------------------------
 -- CREATE TABLE Direccion(
 --     id VARCHAR(20) not null, 
