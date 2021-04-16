@@ -24,16 +24,13 @@ DROP table EspacioPublico;
 DROP table Municipio;
 
 ------------------------------------------
--- CREATE TABLE Direccion(
---     id VARCHAR(20) not null, 
---     cp INTEGER not null, 
---     ciudad VARCHAR(50) not null,
---     calle VARCHAR(50) not null, 
---     numero INTEGER not null, 
---     piso INTEGER not null, 
---     puerta VARCHAR(20) not null,
---     CONSTRAINT cp_direccion PRIMARY KEY (id)
--- );
+CREATE TABLE Direccion(
+    id VARCHAR(20) not null, 
+    cp INTEGER not null, 
+    ciudad VARCHAR(50) not null,
+    calle VARCHAR(100) not null, 
+    CONSTRAINT cp_direccion PRIMARY KEY (id)
+);
 
 
 CREATE TABLE Municipio(
@@ -69,7 +66,7 @@ CREATE TABLE Usuario(
     dni VARCHAR(8) not null,
     nombre_usuario VARCHAR(30) not null,
     nombre_y_apellidos VARCHAR(100) not null,
-    telefono INTEGER not null, 
+    telefono VARCHAR(15) not null, 
     email VARCHAR(50) not null,
     contraseña VARCHAR(30) not null,
     edad INTEGER not null,
@@ -78,8 +75,7 @@ CREATE TABLE Usuario(
     CONSTRAINT cp_usuario PRIMARY KEY (dni),
     CONSTRAINT calt1_usuario UNIQUE (telefono),         --clave alternativa 1, será el telefono
     CONSTRAINT calt2_usuario UNIQUE (correo),           --clave alternativa 2, será el correo electrónico
---     CONSTRAINT ca_usuario_direccion FOREIGN KEY (direccion) REFERENCES Direccion(id)  ON DELETE RESTRICT ON UPDATE CASCADE, -- clave ajena a dirección, será un identificador de dicha dirección
-    CONSTRAINT ri_usuario_telefono CHECK (telefono>600000000 AND telefono<1000000000)  -- regla de integridad (RI)       
+--     CONSTRAINT ca_usuario_direccion FOREIGN KEY (direccion) REFERENCES Direccion(id)  ON DELETE RESTRICT ON UPDATE CASCADE -- clave ajena a dirección, será un identificador de dicha dirección
 );
 
 
