@@ -71,7 +71,7 @@ CREATE TABLE Usuario(
     nombre_usuario VARCHAR(30) not null,
     nombre_y_apellidos VARCHAR(100) not null,
     telefono INTEGER not null, 
-    correo VARCHAR(50) not null,
+    email VARCHAR(50) not null,
     contraseña VARCHAR(30) not null,
     edad INTEGER not null,
     direccion VARCHAR(100) not null,
