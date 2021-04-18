@@ -74,14 +74,14 @@ CREATE TABLE Usuario(
 
 
 CREATE TABLE Ciudadano(
-    dni VARCHAR(8) not null,  
+    dni VARCHAR(9) not null,  
     CONSTRAINT ca_ciudadano_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_ciudadano PRIMARY KEY (dni)
 );
 
 
 CREATE TABLE Gestor(
-    dni VARCHAR(8) not null,  
+    dni VARCHAR(9) not null,  
     municipio VARCHAR(20) not null,
     CONSTRAINT ca_gestror_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_gestor PRIMARY KEY (dni),
@@ -90,7 +90,7 @@ CREATE TABLE Gestor(
 
 
 CREATE TABLE Controlador(
-    dni VARCHAR(8) not null,  
+    dni VARCHAR(9) not null,  
     espacio_publico VARCHAR(20) not null,
     CONSTRAINT ca_controlador_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_controlador PRIMARY KEY (dni),
@@ -112,7 +112,7 @@ CREATE TABLE Zona(
 
 CREATE TABLE Reserva(
     id VARCHAR(20) not null,
-    dni_ciudadano VARCHAR(8) not null,
+    dni_ciudadano VARCHAR(9) not null,
     franja_espacio VARCHAR(20) not null,
     espacio_publico VARCHAR(20) not null,
     estado_reserva VARCHAR(30) not null,
