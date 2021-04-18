@@ -68,8 +68,8 @@ CREATE TABLE Usuario(
     tipo_usuario VARCHAR(12) not null,                  -- si es ciudadano, controlador o gestor municipal
     CONSTRAINT cp_usuario PRIMARY KEY (dni),
     CONSTRAINT calt1_usuario UNIQUE (telefono),         --clave alternativa 1, será el telefono
-    CONSTRAINT calt2_usuario UNIQUE (email)           --clave alternativa 2, será el correo electrónico
---     CONSTRAINT ca_usuario_direccion FOREIGN KEY (direccion) REFERENCES Direccion(id)  ON DELETE RESTRICT ON UPDATE CASCADE -- clave ajena a dirección, será un identificador de dicha dirección
+    CONSTRAINT calt2_usuario UNIQUE (email),           --clave alternativa 2, será el correo electrónico
+    CONSTRAINT calt3_usuario UNIQUE (nombre_de_usuario) --clave alternativa 3, nombre de usuario
 );
 
 
