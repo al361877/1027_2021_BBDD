@@ -55,7 +55,7 @@ CREATE TABLE FranjaEspacio(
 
 
 CREATE TABLE Usuario(
-    dni VARCHAR(8) not null,
+    dni VARCHAR(9) not null,
     nombre_usuario VARCHAR(30) not null,
     nombre_y_apellidos VARCHAR(100) not null,
     telefono VARCHAR(15) not null, 
