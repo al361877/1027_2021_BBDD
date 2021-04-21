@@ -165,7 +165,7 @@ INSERT INTO Usuario VALUES ('A1234509','gemmen', 'GEMMA MENGUAL', '645456564', '
 INSERT INTO Usuario VALUES ('A2345091', 'gallego', 'ALBUSAC TAMARGO DANIEL', '623845091', 'gallego@gmail.com', 'pass', 1994, 'iddir1235093','fghs',6345, 'Ciudadano');
 INSERT INTO Usuario VALUES ('A1345092','CASTELLS', 'CASTELLS GALLEGO MARAI DEL TISCAR', '613745092', 'CASTELLS@hotmail.com', 'pass', 1994, 'iddir1235054', 'sdgh',7346,'Ciudadano');
 INSERT INTO Usuario VALUES ('G1245093','AVELLANEDA', 'CUETO AVELLANEDA RAFAEL', '612455093', 'AVELLANEDA@hotmail.com', 'pass', 1994, 'sgsfsdfg', 'asdfgas',5346,'Ciudadano');
-INSERT INTO Usuario VALUES ('R1235094','ESCOT', 'ESCOT HIGUERAS SANDRA', '614235094', 'ESCOT@gmail.com', 'pass', '12-3-1994', 'iddir1235094','dsfgsg',23456, 'Ciudadano');
+INSERT INTO Usuario VALUES ('R1235094','ESCOT', 'ESCOT HIGUERAS SANDRA', '614235094', 'ESCOT@gmail.com', 'pass', 1994, 'iddir1235094','dsfgsg',23456, 'Ciudadano');
 
 INSERT INTO Usuario VALUES ('G1245493', 'IBAÑEZ', 'GONZALEZ IBAÑEZ DAVID', '612364095', 'IBAÑEZ@hotmail.com', 'pass', 1994, 'iddir8234504', 'asdfgas',52346,'Gestor');
 INSERT INTO Usuario VALUES ('A1234596', 'BECERRA', 'ALONSO BECERRA JOSE', '612347596', 'BECERRA@hotmail.com', 'pass', 1994, 'iddir1234596', 'asdfgas',34573,'Gestor');
