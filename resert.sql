@@ -210,17 +210,17 @@ INSERT INTO  Zona VALUES ('1C', 'este', 'mec2', 10004, 'firme', 'tierra');
 INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 10004, 'firme', 'tierra');
 INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'firme', 'tierra');
 
-INSERT INTO Reserva VALUES ('cs1', 'A1345092', 'd2', 'rio2', 'finUso');
-INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'd4', 'rio2', 'pendienteDeUso');
-INSERT INTO Reserva VALUES ('alc1', 'G1245093', 'd5', 'rio1', 'pendienteDeUso');
-INSERT INTO Reserva VALUES ('xat1', 'R1235094', 'd1', 'herm3', 'finUso');
-INSERT INTO Reserva VALUES ('vlc1', 'A1234509', 'd3', 'rio2', 'CanceladoUuario');
+INSERT INTO Reserva VALUES ('cs1', 'A1345092', 'd2', 'rio2', 'finUso', 'A2');
+INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'd4', 'rio2', 'pendienteDeUso', '3A');
+INSERT INTO Reserva VALUES ('alc1', 'G1245093', 'd5', 'rio1', 'pendienteDeUso', '1A');
+INSERT INTO Reserva VALUES ('xat1', 'R1235094', 'd1', 'herm3', 'finUso', '3A');
+INSERT INTO Reserva VALUES ('vlc1', 'A1234509', 'd3', 'rio2', 'CanceladoUuario', '1C');
 
-INSERT INTO Estacion VALUES ('aa', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY');
-INSERT INTO Estacion VALUES ('bb', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY');
-INSERT INTO Estacion VALUES ('cc', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY');
-INSERT INTO Estacion VALUES ('dd', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY');
-INSERT INTO Estacion VALUES ('ee', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY');
+INSERT INTO Estacion VALUES ('aa', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
+INSERT INTO Estacion VALUES ('bb', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
+INSERT INTO Estacion VALUES ('cc', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
+INSERT INTO Estacion VALUES ('dd', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
+INSERT INTO Estacion VALUES ('ee', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
 
 INSERT INTO Servicio VALUES ('X1', 'CCCC', 'aa');
 INSERT INTO Servicio VALUES ('X2', 'BBBB', 'aa');
