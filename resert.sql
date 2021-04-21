@@ -160,6 +160,10 @@ INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004);
 INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004);
 
 INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'),  TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
+INSERT INTO FranjaEspacio VALUES ('d2', 21/07/2019, 22/07/2019, 12:00, 12:00)
+INSERT INTO FranjaEspacio VALUES ('d3', 27/04/2019, 21/05/2019, 9:00, 12:00)
+INSERT INTO FranjaEspacio VALUES ('d4', 21/05/2020, 21/05/2020, 11:00, 18:00)
+INSERT INTO FranjaEspacio VALUES ('d5', 14/09/2021, 21/10/2021, 9:00, 12:00)
 
 INSERT INTO Usuario VALUES ('A1234509','gemmen', 'GEMMA MENGUAL', '645456564', 'gemmen@hotmail.com', 'pass', 1994, 'iddir123456789','asdfgas',12345, 'Ciudadano');
 INSERT INTO Usuario VALUES ('A2345091', 'gallego', 'ALBUSAC TAMARGO DANIEL', '623845091', 'gallego@gmail.com', 'pass', 1994, 'iddir1235093','fghs',6345, 'Ciudadano');
