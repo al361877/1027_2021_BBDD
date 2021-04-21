@@ -61,7 +61,7 @@ CREATE TABLE Usuario(
     telefono VARCHAR(15) not null, 
     email VARCHAR(50) not null,
     contraseña VARCHAR(30) not null,
-    nacimiento INTEGER not null,
+    nacimiento DATE not null,
     ciudad VARCHAR(100) not null,
     calle VARCHAR(100) not null,
     cp INTEGER not null,
