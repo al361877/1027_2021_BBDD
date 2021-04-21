@@ -11,7 +11,7 @@ INSERT INTO EspacioPublico VALUES('herm3', 'xat', 'otros', 10004);
 INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004);
 INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004);
 
-INSERT INTO FranjaEspacio VALUES ('d1', 21/05/2019, 21/05/2019, 9:00, 12:00)
+INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'),  TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
 INSERT INTO FranjaEspacio VALUES ('d2', 21/07/2019, 22/07/2019, 12:00, 12:00)
 INSERT INTO FranjaEspacio VALUES ('d3', 27/04/2019, 21/05/2019, 9:00, 12:00)
 INSERT INTO FranjaEspacio VALUES ('d4', 21/05/2020, 21/05/2020, 11:00, 18:00)
