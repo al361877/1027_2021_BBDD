@@ -159,7 +159,7 @@ INSERT INTO EspacioPublico VALUES('herm3', 'xat', 'otros', 10004);
 INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004);
 INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004);
 
-
+INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'),  TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
 
 INSERT INTO Usuario VALUES ('A1234509','gemmen', 'GEMMA MENGUAL', '645456564', 'gemmen@hotmail.com', 'pass', 1994, 'iddir123456789','asdfgas',12345, 'Ciudadano');
 INSERT INTO Usuario VALUES ('A2345091', 'gallego', 'ALBUSAC TAMARGO DANIEL', '623845091', 'gallego@gmail.com', 'pass', 1994, 'iddir1235093','fghs',6345, 'Ciudadano');
