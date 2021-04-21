@@ -11,11 +11,11 @@ INSERT INTO EspacioPublico VALUES('herm3', 'xat', 'otros', 10004);
 INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004);
 INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004);
 
-INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'),  TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
-INSERT INTO FranjaEspacio VALUES ('d2', 21/07/2019, 22/07/2019, 12:00, 12:00)
-INSERT INTO FranjaEspacio VALUES ('d3', 27/04/2019, 21/05/2019, 9:00, 12:00)
-INSERT INTO FranjaEspacio VALUES ('d4', 21/05/2020, 21/05/2020, 11:00, 18:00)
-INSERT INTO FranjaEspacio VALUES ('d5', 14/09/2021, 21/10/2021, 9:00, 12:00)
+INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
+INSERT INTO FranjaEspacio VALUES ('d2', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00');
+INSERT INTO FranjaEspacio VALUES ('d3', TO_DATE('27/04/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
+INSERT INTO FranjaEspacio VALUES ('d4', TO_DATE('21/05/2020', 'DD/MM/YYYY'), TO_DATE('21/05/2020', 'DD/MM/YYYY'), '11:00', '18:00');
+INSERT INTO FranjaEspacio VALUES ('d5', TO_DATE('14/09/2021', 'DD/MM/YYYY'), TO_DATE('21/10/2021', 'DD/MM/YYYY'), '9:00', '12:00');
 
 
 INSERT INTO Usuario VALUES ('A1234509','gemmen', 'GEMMA MENGUAL', '645456564', 'gemmen@hotmail.com', 'pass', TO_DATE('12-3-1994', 'DD/MM/YYYY'), 'iddir123456789','asdfgas',12345, 'Ciudadano');
