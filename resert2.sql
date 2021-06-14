@@ -38,8 +38,7 @@ CREATE TABLE EspacioPublico(
     id_municipio VARCHAR(20) not null,
     tipo_espacio VARCHAR(50) not null,
     cp INTEGER not null,
-    aforo_actual INTEGER not null,
-    aforo_maximo INTEGER not null,
+    
     CONSTRAINT cp_espacio PRIMARY KEY (id_espacio),
     CONSTRAINT ca_espacio_munipio FOREIGN KEY (id_municipio) REFERENCES Municipio(id_municipio)  ON DELETE RESTRICT ON UPDATE CASCADE
 );
@@ -106,6 +105,8 @@ CREATE TABLE Zona(
     cp INTEGER not null,
     tipo_suelo VARCHAR(30) not null,
     tipo_acceso VARCHAR(30) not null,
+    aforo_actual INTEGER not null,
+    aforo_maximo INTEGER not null,
     CONSTRAINT cp_zona PRIMARY KEY (id_zona),
     CONSTRAINT ca_zona_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE
 );
@@ -158,12 +159,12 @@ INSERT INTO Municipio VALUES('alc', 'Alicante', '38°21′N 0°29′W', 240000);
 INSERT INTO Municipio VALUES('naq', 'Náquera', '39°48′N 0°33′O', 40000);
 INSERT INTO Municipio VALUES('xat', 'Xativa', '39°58′N 0°53′O', 50000);
 
-INSERT INTO EspacioPublico VALUES('rio1', 'alc', 'rio', 3004,4,500);
-INSERT INTO EspacioPublico VALUES('rio2', 'alc', 'rio', 3004,2,500);
-INSERT INTO EspacioPublico VALUES('des4', 'cs', 'otros', 12004,0,500);
-INSERT INTO EspacioPublico VALUES('herm3', 'xat', 'otros', 10004,0,500);
-INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004,0,500);
-INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004,0,500);
+INSERT INTO EspacioPublico VALUES('rio1', 'alc', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('rio2', 'alc', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('des4', 'cs', 'otros', 12004);
+INSERT INTO EspacioPublico VALUES('herm3', 'xat', 'otros', 10004);
+INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004);
+INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004);
 
 -- INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
 -- INSERT INTO FranjaEspacio VALUES ('d2', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00');
@@ -210,17 +211,17 @@ INSERT INTO Controlador VALUES ('K7234509', 'rio2');
 INSERT INTO Controlador VALUES ('T8234509', 'des4');
 INSERT INTO Controlador VALUES ('E9234509', 'mec2');
 
-INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 10004, 'firme', 'tierra');
-INSERT INTO  Zona VALUES ('1B', 'sur', 'mgd2', 11004, 'firme', 'tierra');
-INSERT INTO  Zona VALUES ('1C', 'este', 'mec2', 10004, 'firme', 'tierra');
-INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 10004, 'firme', 'tierra');
-INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'firme', 'tierra');
+INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 10004, 'firme', 'tierra',2,500);
+INSERT INTO  Zona VALUES ('1B', 'sur', 'mgd2', 11004, 'firme', 'tierra',0,500);
+INSERT INTO  Zona VALUES ('1C', 'este', 'mec2', 10004, 'firme', 'tierra',0,500);
+INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 10004, 'firme', 'tierra',0,500);
+INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'firme', 'tierra',4,500);
 
 INSERT INTO Reserva VALUES ('cs1', 'A1345092',  'rio2', 'finUso', '2A', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00',5);
 INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'rio2', 'pendienteDeUso', '3A', TO_DATE('21/05/2020', 'DD/MM/YYYY'), TO_DATE('21/05/2020', 'DD/MM/YYYY'), '11:00', '18:00',4);
 INSERT INTO Reserva VALUES ('alc1', 'G1245093',  'rio1', 'pendienteDeUso', '1A', TO_DATE('14/09/2021', 'DD/MM/YYYY'), TO_DATE('21/10/2021', 'DD/MM/YYYY'), '9:00', '12:00',2);
 INSERT INTO Reserva VALUES ('xat1', 'R1235094',  'herm3', 'finUso', '3A', TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',1);
-INSERT INTO Reserva VALUES ('vlc1', 'A1234509',  'rio2', 'CanceladoUuario', '1C',TO_DATE('27/04/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',4);
+INSERT INTO Reserva VALUES ('vlc1', 'A1234509',  'rio2', 'canceladaU', '1C',TO_DATE('27/04/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',4);
 
 INSERT INTO Estacion VALUES ('aa', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
 INSERT INTO Estacion VALUES ('bb', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
