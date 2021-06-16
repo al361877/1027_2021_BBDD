@@ -217,12 +217,12 @@ INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 10004, 'roca', 'restringido',0,
 INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'pieda', 'abierto',4,500);
 
 INSERT INTO  Zona VALUES ('4A', 'oeste', 'rio1', 3004, 'pieda', 'abierto',4,500);
-INSERT INTO  Zona VALUES ('2A', 'oeste', 'rio1', 3004, 'arena', 'abierto',4,500);
-INSERT INTO  Zona VALUES ('2B', 'oeste', 'rio1', 3004, 'arena', 'restringido',4,500);
+INSERT INTO  Zona VALUES ('2D', 'oeste', 'rio1', 3004, 'arena', 'abierto',4,500);
+INSERT INTO  Zona VALUES ('1D', 'oeste', 'rio1', 3004, 'arena', 'restringido',4,500);
 
-INSERT INTO  Zona VALUES ('1A', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
-INSERT INTO  Zona VALUES ('2A', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
-INSERT INTO  Zona VALUES ('3A', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
+INSERT INTO  Zona VALUES ('5A', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
+INSERT INTO  Zona VALUES ('3D', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
+INSERT INTO  Zona VALUES ('5B', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
 
 
 
