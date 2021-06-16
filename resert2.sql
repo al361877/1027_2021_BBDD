@@ -210,11 +210,21 @@ INSERT INTO Controlador VALUES ('K7234509', 'rio2');
 INSERT INTO Controlador VALUES ('T8234509', 'des4');
 INSERT INTO Controlador VALUES ('E9234509', 'mec2');
 
-INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 10004, 'firme', 'tierra',2,500);
-INSERT INTO  Zona VALUES ('1B', 'sur', 'mgd2', 11004, 'firme', 'tierra',0,500);
-INSERT INTO  Zona VALUES ('1C', 'este', 'mec2', 10004, 'firme', 'tierra',0,500);
-INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 10004, 'firme', 'tierra',0,500);
-INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'firme', 'tierra',4,500);
+INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 10004, 'piedra', 'abierto',2,500);
+INSERT INTO  Zona VALUES ('1B', 'sur', 'mgd2', 11004, 'arena', 'abierto',0,500);
+INSERT INTO  Zona VALUES ('1C', 'este', 'mec2', 10004, 'arena', 'abierto',0,500);
+INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 10004, 'roca', 'restringido',0,500);
+INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'pieda', 'abierto',4,500);
+
+INSERT INTO  Zona VALUES ('4A', 'oeste', 'rio1', 3004, 'pieda', 'abierto',4,500);
+INSERT INTO  Zona VALUES ('2A', 'oeste', 'rio1', 3004, 'arena', 'abierto',4,500);
+INSERT INTO  Zona VALUES ('2B', 'oeste', 'rio1', 3004, 'arena', 'restringido',4,500);
+
+INSERT INTO  Zona VALUES ('1A', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
+INSERT INTO  Zona VALUES ('2A', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
+INSERT INTO  Zona VALUES ('3A', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500);
+
+
 
 INSERT INTO Reserva VALUES ('cs1', 'A1345092',  'rio2', 'finUso', '2A', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00',5);
 INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'rio2', 'pendienteDeUso', '3A', TO_DATE('21/05/2020', 'DD/MM/YYYY'), TO_DATE('21/05/2020', 'DD/MM/YYYY'), '11:00', '18:00',4);
