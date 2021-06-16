@@ -25,22 +25,21 @@ DROP table Municipio;
 
 
 CREATE TABLE Municipio(
-    id_municipio VARCHAR(20) not null,  
-    nombre VARCHAR(50) not null,
+    n_municipio VARCHAR(50) not null,
     coordenadas VARCHAR(20) not null,
     habitantes int not null,
-    CONSTRAINT cp_municipio PRIMARY KEY (id_municipio)
+    CONSTRAINT cp_municipio PRIMARY KEY (n_municipio)
 );
 
 
 CREATE TABLE EspacioPublico(
     id_espacio VARCHAR(20) not null,
-    id_municipio VARCHAR(20) not null,
+    n_municipio VARCHAR(20) not null,
     tipo_espacio VARCHAR(50) not null,
     cp INTEGER not null,
     
     CONSTRAINT cp_espacio PRIMARY KEY (id_espacio),
-    CONSTRAINT ca_espacio_munipio FOREIGN KEY (id_municipio) REFERENCES Municipio(id_municipio)  ON DELETE RESTRICT ON UPDATE CASCADE
+    CONSTRAINT ca_espacio_munipio FOREIGN KEY (n_municipio) REFERENCES Municipio(n_municipio)  ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 
@@ -82,10 +81,10 @@ CREATE TABLE Ciudadano(
 
 CREATE TABLE Gestor(
     dni VARCHAR(9) not null,  
-    id_municipio VARCHAR(20) not null,
+    n_municipio VARCHAR(20) not null,
     CONSTRAINT ca_gestror_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_gestor PRIMARY KEY (dni),
-    CONSTRAINT ca_gestror_munipio FOREIGN KEY (id_municipio) REFERENCES Municipio(id_municipio)  ON DELETE RESTRICT ON UPDATE CASCADE
+    CONSTRAINT ca_gestror_munipio FOREIGN KEY (n_municipio) REFERENCES Municipio(n_municipio)  ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 
@@ -153,18 +152,18 @@ CREATE TABLE Servicio(
 
 
 
-INSERT INTO Municipio VALUES('cs', 'Castellón', '39°58′N 0°03′O', 150000);
-INSERT INTO Municipio VALUES('vlc', 'Valencia', '39°28′12″N 0°22′35″O', 2850000);
-INSERT INTO Municipio VALUES('alc', 'Alicante', '38°21′N 0°29′W', 240000);
-INSERT INTO Municipio VALUES('naq', 'Náquera', '39°48′N 0°33′O', 40000);
-INSERT INTO Municipio VALUES('xat', 'Xativa', '39°58′N 0°53′O', 50000);
+INSERT INTO Municipio VALUES( 'Castellón', '39°58′N 0°03′O', 150000);
+INSERT INTO Municipio VALUES('Valencia', '39°28′12″N 0°22′35″O', 2850000);
+INSERT INTO Municipio VALUES('Alicante', '38°21′N 0°29′W', 240000);
+INSERT INTO Municipio VALUES('Náquera', '39°48′N 0°33′O', 40000);
+INSERT INTO Municipio VALUES('Xativa', '39°58′N 0°53′O', 50000);
 
-INSERT INTO EspacioPublico VALUES('rio1', 'alc', 'rio', 3004);
-INSERT INTO EspacioPublico VALUES('rio2', 'alc', 'rio', 3004);
-INSERT INTO EspacioPublico VALUES('des4', 'cs', 'otros', 12004);
-INSERT INTO EspacioPublico VALUES('herm3', 'xat', 'otros', 10004);
-INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004);
-INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004);
+INSERT INTO EspacioPublico VALUES('rio1', 'Alicante', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('rio2', 'Alicante', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('des4', 'Castellón', 'otros', 12004);
+INSERT INTO EspacioPublico VALUES('herm3', 'Xativa', 'otros', 10004);
+INSERT INTO EspacioPublico VALUES('mgd2', 'Castellón', 'otros', 10004);
+INSERT INTO EspacioPublico VALUES('mec2', 'Náquera', 'otros', 11004);
 
 -- INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
 -- INSERT INTO FranjaEspacio VALUES ('d2', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00');
@@ -198,11 +197,11 @@ INSERT INTO Ciudadano VALUES ('A1345092');
 INSERT INTO Ciudadano VALUES ('G1245093');
 INSERT INTO Ciudadano VALUES ('R1235094');
 
-INSERT INTO Gestor VALUES ('G1245493', 'cs');
-INSERT INTO Gestor VALUES ('A1234596', 'vlc');
-INSERT INTO Gestor VALUES ('I1234508', 'alc');
-INSERT INTO Gestor VALUES ('U2234509', 'xat');
-INSERT INTO Gestor VALUES ('A3234509', 'naq');
+INSERT INTO Gestor VALUES ('G1245493', 'Castellón');
+INSERT INTO Gestor VALUES ('A1234596', 'Valencia');
+INSERT INTO Gestor VALUES ('I1234508', 'Alicante');
+INSERT INTO Gestor VALUES ('U2234509', 'Xativa');
+INSERT INTO Gestor VALUES ('A3234509', 'Náquera');
 
 INSERT INTO Controlador VALUES ('H4234509', 'mgd2');
 INSERT INTO Controlador VALUES ('G5234509', 'herm3');
