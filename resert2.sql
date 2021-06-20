@@ -1,5 +1,6 @@
+delete from RelacionRZ;
 delete from Gestor;
-delete from Reserva; 
+delete from Reserva;
 delete from Servicio;
 delete from Controlador;
 delete from Zona;
@@ -11,9 +12,10 @@ delete from Estacion;
 
 
 --------------------------------------------
+DROP table RelacionRZ;
 DROP table Servicio;
 DROP table Estacion;
-DROP table Reserva; 
+DROP table Reserva;
 DROP table Zona;
 DROP table Controlador;
 DROP table Gestor;
@@ -37,7 +39,7 @@ CREATE TABLE EspacioPublico(
     n_municipio VARCHAR(20) not null,
     tipo_espacio VARCHAR(50) not null,
     cp INTEGER not null,
-    
+
     CONSTRAINT cp_espacio PRIMARY KEY (id_espacio),
     CONSTRAINT ca_espacio_munipio FOREIGN KEY (n_municipio) REFERENCES Municipio(n_municipio)  ON DELETE RESTRICT ON UPDATE CASCADE
 );
@@ -46,9 +48,9 @@ CREATE TABLE EspacioPublico(
 -- CREATE TABLE FranjaEspacio(
 --     id_franja VARCHAR(50) not null,
 --     fechaIni date not null,
---     fechaFin date not null, 
+--     fechaFin date not null,
 --     horaIni time not null,
---     horaFin time not null, 
+--     horaFin time not null,
 --     CONSTRAINT cp_franja PRIMARY KEY (id)
 -- );
 
@@ -57,7 +59,7 @@ CREATE TABLE Usuario(
     dni VARCHAR(9) not null,
     nombre_usuario VARCHAR(30) not null,
     nombre_y_apellidos VARCHAR(100) not null,
-    telefono VARCHAR(15) not null, 
+    telefono VARCHAR(15) not null,
     email VARCHAR(50) not null,
     contraseña VARCHAR(30) not null,
     nacimiento DATE not null,
@@ -73,14 +75,14 @@ CREATE TABLE Usuario(
 
 
 CREATE TABLE Ciudadano(
-    dni VARCHAR(9) not null,  
+    dni VARCHAR(9) not null,
     CONSTRAINT ca_ciudadano_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_ciudadano PRIMARY KEY (dni)
 );
 
 
 CREATE TABLE Gestor(
-    dni VARCHAR(9) not null,  
+    dni VARCHAR(9) not null,
     n_municipio VARCHAR(20) not null,
     CONSTRAINT ca_gestror_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_gestor PRIMARY KEY (dni),
@@ -89,7 +91,7 @@ CREATE TABLE Gestor(
 
 
 CREATE TABLE Controlador(
-    dni VARCHAR(9) not null,  
+    dni VARCHAR(9) not null,
     id_espacio VARCHAR(20) not null,
     CONSTRAINT ca_controlador_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
     CONSTRAINT cp_controlador PRIMARY KEY (dni),
@@ -112,33 +114,38 @@ CREATE TABLE Zona(
 
 
 CREATE TABLE Reserva(
-    id VARCHAR(20) not null,
+    id_reserva VARCHAR(20) not null,
     dni_ciudadano VARCHAR(9) not null,
 --     id_franja VARCHAR(20) not null,
     id_espacio VARCHAR(20) not null,
     estado_reserva VARCHAR(30) not null,
-    id_zona VARCHAR(20) not null,
     fechaIni date not null,
-    fechaFin date not null, 
+    fechaFin date not null,
     horaIni time not null,
-    horaFin time not null, 
+    horaFin time not null,
     numPersonas INTEGER not null,
-   
-    CONSTRAINT cp_reserva PRIMARY KEY (id),
+    CONSTRAINT cp_reserva PRIMARY KEY (id_reserva),
     CONSTRAINT ca_reserva_cidudadano FOREIGN KEY (dni_ciudadano) REFERENCES Ciudadano(dni)  ON DELETE RESTRICT ON UPDATE CASCADE,
-    CONSTRAINT ca_reserva_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT ca_reserva_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE
 --     CONSTRAINT ca_reserva_franja FOREIGN KEY (id_franja) REFERENCES FranjaEspacio(id_franja)  ON DELETE RESTRICT ON UPDATE CASCADE,
-    CONSTRAINT ca_reserva_zona FOREIGN KEY (id_zona) REFERENCES Zona(id_zona)  ON DELETE RESTRICT ON UPDATE CASCADE
+
 );
 
 
 CREATE TABLE Estacion(
     id_estacion VARCHAR(50) not null,
     fechaIni date not null,
-    fechaFin date not null, 
+    fechaFin date not null,
     CONSTRAINT cp_estacion PRIMARY KEY (id_estacion)
 );
 
+CREATE TABLE RelacionRZ(
+    id_zona VARCHAR(20) not null,
+    id_reserva VARCHAR(20) not null,
+    CONSTRAINT ca_zona FOREIGN KEY (id_zona) REFERENCES Zona(id_zona)  ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT ca_reserva FOREIGN KEY (id_reserva) REFERENCES Reserva(id_reserva)  ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT cp_relacion PRIMARY KEY (id_zona,id_reserva)
+);
 
 CREATE TABLE Servicio(
     id_servicio  VARCHAR(20) not null,
@@ -226,11 +233,17 @@ INSERT INTO  Zona VALUES ('5B', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500)
 
 
 
-INSERT INTO Reserva VALUES ('cs1', 'A1345092',  'rio2', 'finUso', '2A', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00',5);
-INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'rio2', 'pendienteDeUso', '3A', TO_DATE('21/05/2020', 'DD/MM/YYYY'), TO_DATE('21/05/2020', 'DD/MM/YYYY'), '11:00', '18:00',4);
-INSERT INTO Reserva VALUES ('alc1', 'G1245093',  'rio1', 'pendienteDeUso', '1A', TO_DATE('14/09/2021', 'DD/MM/YYYY'), TO_DATE('21/10/2021', 'DD/MM/YYYY'), '9:00', '12:00',2);
-INSERT INTO Reserva VALUES ('xat1', 'R1235094',  'herm3', 'finUso', '3A', TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',1);
-INSERT INTO Reserva VALUES ('vlc1', 'A1234509',  'rio2', 'canceladaU', '1C',TO_DATE('27/04/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',4);
+INSERT INTO Reserva VALUES ('cs1', 'A1345092',  'rio2', 'finUso', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00',5);
+INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'rio2', 'pendienteDeUso',  TO_DATE('21/05/2020', 'DD/MM/YYYY'), TO_DATE('21/05/2020', 'DD/MM/YYYY'), '11:00', '18:00',4);
+INSERT INTO Reserva VALUES ('alc1', 'G1245093',  'rio1', 'pendienteDeUso',  TO_DATE('14/09/2021', 'DD/MM/YYYY'), TO_DATE('21/10/2021', 'DD/MM/YYYY'), '9:00', '12:00',2);
+INSERT INTO Reserva VALUES ('xat1', 'R1235094',  'herm3', 'finUso',  TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',1);
+INSERT INTO Reserva VALUES ('vlc1', 'A1234509',  'rio2', 'canceladaU', TO_DATE('27/04/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',4);
+
+INSERT INTO  RelacionRZ VALUES ('2A', 'cs1');
+INSERT INTO  RelacionRZ VALUES ('3A', 'cs2');
+INSERT INTO  RelacionRZ VALUES ('1A', 'alc1');
+INSERT INTO  RelacionRZ VALUES ('3A', 'xat1');
+INSERT INTO  RelacionRZ VALUES ('1C', 'vlc1');
 
 INSERT INTO Estacion VALUES ('aa', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
 INSERT INTO Estacion VALUES ('bb', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
@@ -243,3 +256,4 @@ INSERT INTO Servicio VALUES ('X2', 'BBBB', 'aa');
 INSERT INTO Servicio VALUES ('X3', 'CCCC', 'dd');
 INSERT INTO Servicio VALUES ('X4', 'DDDD', 'dd');
 INSERT INTO Servicio VALUES ('X5', 'TTTT', 'cc');
+
