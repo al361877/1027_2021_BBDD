@@ -28,6 +28,7 @@ DROP table Municipio;
 
 CREATE TABLE Municipio(
     n_municipio VARCHAR(50) not null,
+    nombre VARCHAR(50) not null,
     coordenadas VARCHAR(20) not null,
     habitantes int not null,
     CONSTRAINT cp_municipio PRIMARY KEY (n_municipio)
@@ -165,12 +166,12 @@ INSERT INTO Municipio VALUES('Alicante', '38°21′N 0°29′W', 240000);
 INSERT INTO Municipio VALUES('Náquera', '39°48′N 0°33′O', 40000);
 INSERT INTO Municipio VALUES('Xativa', '39°58′N 0°53′O', 50000);
 
-INSERT INTO EspacioPublico VALUES('rio1', 'Alicante', 'rio', 3004);
-INSERT INTO EspacioPublico VALUES('rio2', 'Alicante', 'rio', 3004);
-INSERT INTO EspacioPublico VALUES('des4', 'Castellón', 'otros', 12004);
-INSERT INTO EspacioPublico VALUES('herm3', 'Xativa', 'otros', 10004);
-INSERT INTO EspacioPublico VALUES('mgd2', 'Castellón', 'otros', 10004);
-INSERT INTO EspacioPublico VALUES('mec2', 'Náquera', 'otros', 11004);
+INSERT INTO EspacioPublico VALUES('rio1', 'Las fuentes del Algar', 'alc', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('rio2', 'Las Pozas del río Clariano', 'alc', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('des4', 'Desierto de las Palma', 'cs', 'otros', 12004);
+INSERT INTO EspacioPublico VALUES('erm3', 'Ermita de Sant Josep', 'xat', 'otros', 10004);
+INSERT INTO EspacioPublico VALUES('mgd2', 'Ermita La Magdalena', 'cs', 'otros', 12004);
+INSERT INTO EspacioPublico VALUES('mec2', 'Mirador de Naquera', 'naq', 'otros', 11004);
 
 -- INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
 -- INSERT INTO FranjaEspacio VALUES ('d2', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00');
@@ -211,16 +212,16 @@ INSERT INTO Gestor VALUES ('U2234509', 'Xativa');
 INSERT INTO Gestor VALUES ('A3234509', 'Náquera');
 
 INSERT INTO Controlador VALUES ('H4234509', 'mgd2');
-INSERT INTO Controlador VALUES ('G5234509', 'herm3');
+INSERT INTO Controlador VALUES ('G5234509', 'erm3');
 INSERT INTO Controlador VALUES ('F6234509', 'rio1');
 INSERT INTO Controlador VALUES ('K7234509', 'rio2');
 INSERT INTO Controlador VALUES ('T8234509', 'des4');
 INSERT INTO Controlador VALUES ('E9234509', 'mec2');
 
-INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 10004, 'piedra', 'abierto',2,500);
+INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 12004, 'piedra', 'abierto',2,500);
 INSERT INTO  Zona VALUES ('1B', 'sur', 'mgd2', 11004, 'arena', 'abierto',0,500);
 INSERT INTO  Zona VALUES ('1C', 'este', 'mec2', 10004, 'arena', 'abierto',0,500);
-INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 10004, 'roca', 'restringido',0,500);
+INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 12004, 'roca', 'restringido',0,500);
 INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'pieda', 'abierto',4,500);
 
 INSERT INTO  Zona VALUES ('4A', 'oeste', 'rio1', 3004, 'pieda', 'abierto',4,500);
@@ -236,7 +237,7 @@ INSERT INTO  Zona VALUES ('5B', 'oeste', 'des4', 3004, 'arena', 'abierto',4,500)
 INSERT INTO Reserva VALUES ('cs1', 'A1345092',  'rio2', 'finUso', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00',5);
 INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'rio2', 'pendienteDeUso',  TO_DATE('21/05/2020', 'DD/MM/YYYY'), TO_DATE('21/05/2020', 'DD/MM/YYYY'), '11:00', '18:00',4);
 INSERT INTO Reserva VALUES ('alc1', 'G1245093',  'rio1', 'pendienteDeUso',  TO_DATE('14/09/2021', 'DD/MM/YYYY'), TO_DATE('21/10/2021', 'DD/MM/YYYY'), '9:00', '12:00',2);
-INSERT INTO Reserva VALUES ('xat1', 'R1235094',  'herm3', 'finUso',  TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',1);
+INSERT INTO Reserva VALUES ('xat1', 'R1235094',  'erm3', 'finUso',  TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',1);
 INSERT INTO Reserva VALUES ('vlc1', 'A1234509',  'rio2', 'canceladaU', TO_DATE('27/04/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00',4);
 
 INSERT INTO  RelacionRZ VALUES ('2A', 'cs1');
