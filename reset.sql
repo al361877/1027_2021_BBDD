@@ -36,6 +36,7 @@ CREATE TABLE Municipio(
 
 CREATE TABLE EspacioPublico(
     id VARCHAR(20) not null,
+    nombre VARCHAR(50) not null,
     municipio VARCHAR(20) not null,
     tipo_espacio VARCHAR(50) not null,
     cp INTEGER not null,
@@ -152,12 +153,12 @@ INSERT INTO Municipio VALUES('alc', 'Alicante', '38°21′N 0°29′W', 240000);
 INSERT INTO Municipio VALUES('naq', 'Náquera', '39°48′N 0°33′O', 40000);
 INSERT INTO Municipio VALUES('xat', 'Xativa', '39°58′N 0°53′O', 50000);
 
-INSERT INTO EspacioPublico VALUES('rio1', 'alc', 'rio', 3004);
-INSERT INTO EspacioPublico VALUES('rio2', 'alc', 'rio', 3004);
-INSERT INTO EspacioPublico VALUES('des4', 'cs', 'otros', 12004);
-INSERT INTO EspacioPublico VALUES('herm3', 'xat', 'otros', 10004);
-INSERT INTO EspacioPublico VALUES('mgd2', 'cs', 'otros', 10004);
-INSERT INTO EspacioPublico VALUES('mec2', 'naq', 'otros', 11004);
+INSERT INTO EspacioPublico VALUES('rio1', 'Las fuentes del Algar', 'alc', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('rio2', 'Las Pozas del río Clariano', 'alc', 'rio', 3004);
+INSERT INTO EspacioPublico VALUES('des4', 'Desierto de las Palma', 'cs', 'otros', 12004);
+INSERT INTO EspacioPublico VALUES('erm3', 'Ermita de Sant Josep', 'xat', 'otros', 10004);
+INSERT INTO EspacioPublico VALUES('mgd2', 'Ermita La Magdalena', 'cs', 'otros', 12004);
+INSERT INTO EspacioPublico VALUES('mec2', 'Mirador de Naquera', 'naq', 'otros', 11004);
 
 INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('21/05/2019', 'DD/MM/YYYY'), TO_DATE('21/05/2019', 'DD/MM/YYYY'), '9:00', '12:00');
 INSERT INTO FranjaEspacio VALUES ('d2', TO_DATE('21/07/2019', 'DD/MM/YYYY'), TO_DATE('22/07/2019', 'DD/MM/YYYY'), '12:00', '12:00');
