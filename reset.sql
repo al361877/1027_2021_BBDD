@@ -199,7 +199,7 @@ INSERT INTO Gestor VALUES ('U2234509', 'xat');
 INSERT INTO Gestor VALUES ('A3234509', 'naq');
 
 INSERT INTO Controlador VALUES ('H4234509', 'mgd2');
-INSERT INTO Controlador VALUES ('G5234509', 'herm3');
+INSERT INTO Controlador VALUES ('G5234509', 'erm3');
 INSERT INTO Controlador VALUES ('F6234509', 'rio1');
 INSERT INTO Controlador VALUES ('K7234509', 'rio2');
 INSERT INTO Controlador VALUES ('T8234509', 'des4');
@@ -214,7 +214,7 @@ INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'firme', 'tierra');
 INSERT INTO Reserva VALUES ('cs1', 'A1345092', 'd2', 'rio2', 'finUso', 'A2');
 INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'd4', 'rio2', 'pendienteDeUso', '3A');
 INSERT INTO Reserva VALUES ('alc1', 'G1245093', 'd5', 'rio1', 'pendienteDeUso', '1A');
-INSERT INTO Reserva VALUES ('xat1', 'R1235094', 'd1', 'herm3', 'finUso', '3A');
+INSERT INTO Reserva VALUES ('xat1', 'R1235094', 'd1', 'erm3', 'finUso', '3A');
 INSERT INTO Reserva VALUES ('vlc1', 'A1234509', 'd3', 'rio2', 'CanceladoUuario', '1C');
 
 INSERT INTO Estacion VALUES ('aa', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
