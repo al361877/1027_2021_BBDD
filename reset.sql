@@ -205,10 +205,10 @@ INSERT INTO Controlador VALUES ('K7234509', 'rio2');
 INSERT INTO Controlador VALUES ('T8234509', 'des4');
 INSERT INTO Controlador VALUES ('E9234509', 'mec2');
 
-INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 10004, 'firme', 'tierra');
+INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 12004, 'firme', 'tierra');
 INSERT INTO  Zona VALUES ('1B', 'sur', 'mgd2', 11004, 'firme', 'tierra');
 INSERT INTO  Zona VALUES ('1C', 'este', 'mec2', 10004, 'firme', 'tierra');
-INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 10004, 'firme', 'tierra');
+INSERT INTO  Zona VALUES ('2A', 'norte', 'mgd2', 12004, 'firme', 'tierra');
 INSERT INTO  Zona VALUES ('3A', 'oeste', 'rio2', 3004, 'firme', 'tierra');
 
 INSERT INTO Reserva VALUES ('cs1', 'A1345092', 'd2', 'rio2', 'finUso', 'A2');
