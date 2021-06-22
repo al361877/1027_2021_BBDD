@@ -248,15 +248,15 @@ INSERT INTO  RelacionRZ VALUES ('1A', 'alc1');
 INSERT INTO  RelacionRZ VALUES ('3A', 'xat1');
 INSERT INTO  RelacionRZ VALUES ('1C', 'vlc1');
 
-INSERT INTO Estacion VALUES ('aa', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
-INSERT INTO Estacion VALUES ('bb', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
-INSERT INTO Estacion VALUES ('cc', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
-INSERT INTO Estacion VALUES ('dd', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
-INSERT INTO Estacion VALUES ('ee', TO_DATE('12/08/2019', 'DD/MM/YYYY'), TO_DATE('12/08/2019', 'DD/MM/YYYY'));
+INSERT INTO Estacion VALUES ('verano', TO_DATE('21/06', 'DD/MM'), TO_DATE('22/09', 'DD/MM'));
+INSERT INTO Estacion VALUES ('invierno', TO_DATE('21/12', 'DD/MM'), TO_DATE('20/03', 'DD/MM'));
+INSERT INTO Estacion VALUES ('otoño', TO_DATE('22/09', 'DD/MM'), TO_DATE('21/12', 'DD/MM'));
+INSERT INTO Estacion VALUES ('primavera', TO_DATE('20/03', 'DD/MM'), TO_DATE('21/06', 'DD/MM'));
 
-INSERT INTO Servicio VALUES ('X1', 'CCCC', 'aa');
-INSERT INTO Servicio VALUES ('X2', 'BBBB', 'aa');
-INSERT INTO Servicio VALUES ('X3', 'CCCC', 'dd');
-INSERT INTO Servicio VALUES ('X4', 'DDDD', 'dd');
-INSERT INTO Servicio VALUES ('X5', 'TTTT', 'cc');
+
+INSERT INTO Servicio VALUES ('X1', 'CCCC', 'verano');
+INSERT INTO Servicio VALUES ('X2', 'BBBB', 'invierno');
+INSERT INTO Servicio VALUES ('X3', 'CCCC', 'otoño');
+INSERT INTO Servicio VALUES ('X4', 'DDDD', 'primavera');
+INSERT INTO Servicio VALUES ('X5', 'TTTT', 'verano');
 
