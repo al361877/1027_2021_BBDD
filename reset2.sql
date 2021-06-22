@@ -28,7 +28,6 @@ DROP table Municipio;
 
 CREATE TABLE Municipio(
     n_municipio VARCHAR(50) not null,
-    nombre VARCHAR(50) not null,
     coordenadas VARCHAR(20) not null,
     habitantes int not null,
     CONSTRAINT cp_municipio PRIMARY KEY (n_municipio)
@@ -37,6 +36,7 @@ CREATE TABLE Municipio(
 
 CREATE TABLE EspacioPublico(
     id_espacio VARCHAR(20) not null,
+    nombre VARCHAR(50) not null,
     n_municipio VARCHAR(20) not null,
     tipo_espacio VARCHAR(50) not null,
     cp INTEGER not null,
