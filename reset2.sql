@@ -152,8 +152,11 @@ CREATE TABLE Servicio(
     id_servicio  VARCHAR(20) not null,
     tipo_servicio VARCHAR(50) not null,
     id_estacion VARCHAR(50),
+    id_espacio VARCHAR(20) not null,
     CONSTRAINT cp_servicio PRIMARY KEY (id_servicio),
-    CONSTRAINT ca_servicio_estacion FOREIGN KEY (id_estacion) REFERENCES Estacion(id_estacion)  ON DELETE RESTRICT ON UPDATE CASCADE
+    CONSTRAINT ca_servicio_estacion FOREIGN KEY (id_estacion) REFERENCES Estacion(id_estacion)  ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT ca_servicio_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE
+
 );
 
 
@@ -254,9 +257,40 @@ INSERT INTO Estacion VALUES ('otoño', TO_DATE('22/09/2019', 'DD/MM/YYYY'), TO_D
 INSERT INTO Estacion VALUES ('primavera', TO_DATE('20/03/2019', 'DD/MM/YYYY'), TO_DATE('21/06/2019', 'DD/MM/YYYY'));
 
 
-INSERT INTO Servicio VALUES ('X1', 'CCCC', 'verano');
-INSERT INTO Servicio VALUES ('X2', 'BBBB', 'invierno');
-INSERT INTO Servicio VALUES ('X3', 'CCCC', 'otoño');
-INSERT INTO Servicio VALUES ('X4', 'DDDD', 'primavera');
-INSERT INTO Servicio VALUES ('X5', 'TTTT', 'verano');
+INSERT INTO Servicio VALUES ('X1', 'baño', 'verano','rio1');
+INSERT INTO Servicio VALUES ('V1', 'ver flores', 'primavera','rio1');
+INSERT INTO Servicio VALUES ('Y1', 'picnics', 'otoño','rio1');
+INSERT INTO Servicio VALUES ('T1', 'nevar', 'invierno','rio1');
+
+
+INSERT INTO Servicio VALUES ('X2', 'baño', 'verano','rio2');
+INSERT INTO Servicio VALUES ('V2', 'ver flores', 'primavera','rio2');
+INSERT INTO Servicio VALUES ('Y2', 'picnics', 'otoño','rio2');
+INSERT INTO Servicio VALUES ('T2', 'nevar', 'invierno','rio2');
+
+
+INSERT INTO Servicio VALUES ('X3', 'baño', 'verano','des4');
+INSERT INTO Servicio VALUES ('V3', 'ver flores', 'primavera','des4');
+INSERT INTO Servicio VALUES ('Y3', 'picnics', 'otoño','des4');
+INSERT INTO Servicio VALUES ('T3', 'nevar', 'invierno','des4');
+
+
+
+INSERT INTO Servicio VALUES ('X4', 'baño', 'verano','erm3');
+INSERT INTO Servicio VALUES ('V4', 'ver flores', 'primavera','erm3');
+INSERT INTO Servicio VALUES ('Y4', 'picnics', 'otoño','erm3');
+INSERT INTO Servicio VALUES ('T4', 'nevar', 'invierno','erm3');
+
+
+
+INSERT INTO Servicio VALUES ('X5', 'baño', 'verano','mgd2');
+INSERT INTO Servicio VALUES ('V5', 'ver flores', 'primavera','mgd2');
+INSERT INTO Servicio VALUES ('Y5', 'picnics', 'otoño','mgd2');
+INSERT INTO Servicio VALUES ('T5', 'nevar', 'invierno','mgd2');
+
+
+INSERT INTO Servicio VALUES ('X6', 'baño', 'verano','mec2');
+INSERT INTO Servicio VALUES ('V6', 'ver flores', 'primavera','mec2');
+INSERT INTO Servicio VALUES ('Y6', 'picnics', 'otoño','mec2');
+INSERT INTO Servicio VALUES ('T6', 'nevar', 'invierno','mec2');
 
