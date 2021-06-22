@@ -248,10 +248,10 @@ INSERT INTO  RelacionRZ VALUES ('1A', 'alc1');
 INSERT INTO  RelacionRZ VALUES ('3A', 'xat1');
 INSERT INTO  RelacionRZ VALUES ('1C', 'vlc1');
 
-INSERT INTO Estacion VALUES ('verano', TO_DATE('21/06', 'DD/MM'), TO_DATE('22/09', 'DD/MM'));
-INSERT INTO Estacion VALUES ('invierno', TO_DATE('21/12', 'DD/MM'), TO_DATE('20/03', 'DD/MM'));
-INSERT INTO Estacion VALUES ('otoño', TO_DATE('22/09', 'DD/MM'), TO_DATE('21/12', 'DD/MM'));
-INSERT INTO Estacion VALUES ('primavera', TO_DATE('20/03', 'DD/MM'), TO_DATE('21/06', 'DD/MM'));
+INSERT INTO Estacion VALUES ('verano', TO_DATE('21/06/2019', 'DD/MM/YYYY'), TO_DATE('22/09/2019', 'DD/MM/YYYY'));
+INSERT INTO Estacion VALUES ('invierno', TO_DATE('21/12/2019', 'DD/MM/YYYY'), TO_DATE('20/03/2019', 'DD/MM/YYYY'));
+INSERT INTO Estacion VALUES ('otoño', TO_DATE('22/09/2019', 'DD/MM/YYYY'), TO_DATE('21/12/2019', 'DD/MM/YYYY'));
+INSERT INTO Estacion VALUES ('primavera', TO_DATE('20/03/2019', 'DD/MM/YYYY'), TO_DATE('21/06/2019', 'DD/MM/YYYY'));
 
 
 INSERT INTO Servicio VALUES ('X1', 'CCCC', 'verano');
