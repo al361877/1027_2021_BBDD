@@ -47,8 +47,6 @@
 
     CREATE TABLE FranjaEspacio(
         id_franja VARCHAR(50) not null,
-        fechaIni date not null,
-        fechaFin date not null,
         horaIni time not null,
         horaFin time not null,
         CONSTRAINT cp_franja PRIMARY KEY (id_franja)
@@ -176,12 +174,16 @@
     INSERT INTO EspacioPublico VALUES('mec2', 'Mirador de Naquera', 'Náquera', 'otros', 11004);
 
 
-    INSERT INTO FranjaEspacio VALUES ('d1', TO_DATE('4/06/2021', 'DD/MM/YYYY'), TO_DATE('4/06/2021', 'DD/MM/YYYY'), '9:00', '12:00');
-    INSERT INTO FranjaEspacio VALUES ('d2', TO_DATE('23/06/2021', 'DD/MM/YYYY'), TO_DATE('24/06/2021', 'DD/MM/YYYY'), '22:00', '7:00');
-    INSERT INTO FranjaEspacio VALUES ('d3', TO_DATE('14/08/2021', 'DD/MM/YYYY'), TO_DATE('15/08/2021', 'DD/MM/YYYY'), '9:00', '12:00');
-    INSERT INTO FranjaEspacio VALUES ('d4', TO_DATE('14/09/2021', 'DD/MM/YYYY'), TO_DATE('14/09/2021', 'DD/MM/YYYY'), '11:00', '18:00');
-    INSERT INTO FranjaEspacio VALUES ('d5', TO_DATE('14/10/2021', 'DD/MM/YYYY'), TO_DATE('15/10/2021', 'DD/MM/YYYY'), '9:00', '12:00');
-
+    INSERT INTO FranjaEspacio VALUES ('d1', '9:00', '10:00');
+    INSERT INTO FranjaEspacio VALUES ('d2',  '10:00', '11:00');
+    INSERT INTO FranjaEspacio VALUES ('d3', '11:00', '12:00');
+    INSERT INTO FranjaEspacio VALUES ('d4',  '12:00', '13:00');
+    INSERT INTO FranjaEspacio VALUES ('d5',  '15:00', '16:00');
+    INSERT INTO FranjaEspacio VALUES ('d6',  '16:00', '17:00');
+    INSERT INTO FranjaEspacio VALUES ('d7',  '17:00', '18:00');
+    INSERT INTO FranjaEspacio VALUES ('d8',  '18:00', '19:00');
+    INSERT INTO FranjaEspacio VALUES ('d9',  '19:00', '20:00'); 
+    
     INSERT INTO Usuario VALUES ('A1234509','gemmen', 'GEMMA MENGUAL', '645456564', 'gemmen@hotmail.com', 'pass', TO_DATE('12-3-1994', 'DD/MM/YYYY'), 'iddir123456789','asdfgas',12345, 'Ciudadano');
     INSERT INTO Usuario VALUES ('A2345091', 'gallego', 'ALBUSAC TAMARGO DANIEL', '623845091', 'gallego@gmail.com', 'pass', TO_DATE('12-3-1994', 'DD/MM/YYYY'), 'iddir1235093','fghs',6345, 'Ciudadano');
     INSERT INTO Usuario VALUES ('A1345092','CASTELLS', 'CASTELLS GALLEGO MARAI DEL TISCAR', '613745092', 'CASTELLS@hotmail.com', 'pass', TO_DATE('12-3-1994', 'DD/MM/YYYY'), 'iddir1235054', 'sdgh',7346,'Ciudadano');
