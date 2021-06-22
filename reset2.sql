@@ -121,8 +121,8 @@
         numPersonas INTEGER not null,
         CONSTRAINT cp_reserva PRIMARY KEY (id_reserva),
         CONSTRAINT ca_reserva_cidudadano FOREIGN KEY (dni_ciudadano) REFERENCES Ciudadano(dni)  ON DELETE RESTRICT ON UPDATE CASCADE,
-        CONSTRAINT ca_reserva_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE
-        CONSTRAINT ca_reserva_franja FOREIGN KEY (id_franja) REFERENCES FranjaEspacio(id_franja)  ON DELETE RESTRICT ON UPDATE CASCADE,
+        CONSTRAINT ca_reserva_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE,
+        CONSTRAINT ca_reserva_franja FOREIGN KEY (id_franja) REFERENCES FranjaEspacio(id_franja)  ON DELETE RESTRICT ON UPDATE CASCADE
 
     );
 
