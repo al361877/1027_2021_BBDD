@@ -237,10 +237,10 @@
 
 
     INSERT INTO Reserva VALUES ('cs1', 'A1345092', 'd1' ,'rio2', 'finUso', TO_DATE('21/07/2019', 'DD/MM/YYYY') ,5);
-    INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'd2','rio2', 'pendienteDeUso',  TO_DATE('21/05/2020', 'DD/MM/YYYY'),  '11:00', '18:00',4);
-    INSERT INTO Reserva VALUES ('alc1', 'G1245093',  'd2','rio1', 'pendienteDeUso',  TO_DATE('14/09/2021', 'DD/MM/YYYY'),'9:00', '12:00',2);
-    INSERT INTO Reserva VALUES ('xat1', 'R1235094',  'd2','erm3', 'finUso',  TO_DATE('21/05/2019', 'DD/MM/YYYY'),'9:00', '12:00',1);
-    INSERT INTO Reserva VALUES ('vlc1', 'A1234509', 'd4', 'rio2', 'canceladaU', TO_DATE('27/04/2019', 'DD/MM/YYYY'), '9:00', '12:00',4);
+    INSERT INTO Reserva VALUES ('cs2', 'A1345092', 'd2','rio2', 'pendienteDeUso',  TO_DATE('21/05/2020', 'DD/MM/YYYY'),4);
+    INSERT INTO Reserva VALUES ('alc1', 'G1245093',  'd2','rio1', 'pendienteDeUso',  TO_DATE('14/09/2021', 'DD/MM/YYYY'),2);
+    INSERT INTO Reserva VALUES ('xat1', 'R1235094',  'd2','erm3', 'finUso',  TO_DATE('21/05/2019', 'DD/MM/YYYY'),1);
+    INSERT INTO Reserva VALUES ('vlc1', 'A1234509', 'd4', 'rio2', 'canceladaU', TO_DATE('27/04/2019', 'DD/MM/YYYY'),4);
 
     INSERT INTO  RelacionRZ VALUES ('2A', 'cs1');
     INSERT INTO  RelacionRZ VALUES ('3A', 'cs2');
