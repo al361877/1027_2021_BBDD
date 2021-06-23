@@ -59,7 +59,7 @@
         nombre_y_apellidos VARCHAR(100) not null,
         telefono VARCHAR(15) not null,
         email VARCHAR(50) not null,
-        contraseña VARCHAR(30) not null,
+        contraseña VARCHAR(100) not null,
         nacimiento DATE not null,
         ciudad VARCHAR(100) not null,
         calle VARCHAR(100) not null,
