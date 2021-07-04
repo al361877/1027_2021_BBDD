@@ -214,13 +214,13 @@
     INSERT INTO Gestor VALUES ('U2234509', 'Xativa');
     INSERT INTO Gestor VALUES ('A3234509', 'Náquera');
 
-    INSERT INTO Controlador VALUES ('H4234509', 'mgd2', 'L#M#X');
-    INSERT INTO Controlador VALUES ('H4234509', 'des4', 'J#V#S#D');
-    INSERT INTO Controlador VALUES ('G5234509', 'erm3', 'L#M#X#J#V#S#D');
-    INSERT INTO Controlador VALUES ('F6234509', 'rio1','L#M#X#J#V#S#D');
-    INSERT INTO Controlador VALUES ('K7234509', 'rio2','L#M#X#J#V#S#D');
-    INSERT INTO Controlador VALUES ('T8234509', 'des4','L#M#X#J#V#S#D');
-    INSERT INTO Controlador VALUES ('E9234509', 'mec2','L#M#X#J#V#S#D');
+    INSERT INTO Controlador VALUES ('H4234509', 'mgd2', 'L M X');
+    INSERT INTO Controlador VALUES ('H4234509', 'des4', 'J V S D');
+    INSERT INTO Controlador VALUES ('G5234509', 'erm3', 'L M X J V S D');
+    INSERT INTO Controlador VALUES ('F6234509', 'rio1','L M X J V S D');
+    INSERT INTO Controlador VALUES ('K7234509', 'rio2','L M X J V S D');
+    INSERT INTO Controlador VALUES ('T8234509', 'des4','L M X J V S D');
+    INSERT INTO Controlador VALUES ('E9234509', 'mec2','L M X J V S D');
 
     INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 12004, 'piedra', 'abierto',2,500);
     INSERT INTO  Zona VALUES ('1B', 'sur', 'mgd2', 11004, 'arena', 'abierto',0,500);
