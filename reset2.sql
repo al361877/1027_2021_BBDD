@@ -91,10 +91,9 @@
     CREATE TABLE Controlador(
         dni VARCHAR(9) not null,
         id_espacio VARCHAR(20) not null,
-        días_semana_trabaja VARCHAR(13) not null,
         CONSTRAINT ca_controlador_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE,
         CONSTRAINT ca_controlador_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE,
-        CONSTRAINT cp_controlador PRIMARY KEY (dni, id_espacio)
+        CONSTRAINT cp_controlador PRIMARY KEY (dni)
     );
 
 
@@ -214,13 +213,12 @@
     INSERT INTO Gestor VALUES ('U2234509', 'Xativa');
     INSERT INTO Gestor VALUES ('A3234509', 'Náquera');
 
-    INSERT INTO Controlador VALUES ('H4234509', 'mgd2', 'L M X');
-    INSERT INTO Controlador VALUES ('H4234509', 'des4', 'J V S D');
-    INSERT INTO Controlador VALUES ('G5234509', 'erm3', 'L M X J V S D');
-    INSERT INTO Controlador VALUES ('F6234509', 'rio1','L M X J V S D');
-    INSERT INTO Controlador VALUES ('K7234509', 'rio2','L M X J V S D');
-    INSERT INTO Controlador VALUES ('T8234509', 'des4','L M X J V S D');
-    INSERT INTO Controlador VALUES ('E9234509', 'mec2','L M X J V S D');
+    INSERT INTO Controlador VALUES ('H4234509', 'mgd2');
+    INSERT INTO Controlador VALUES ('G5234509', 'erm3');
+    INSERT INTO Controlador VALUES ('F6234509', 'rio1');
+    INSERT INTO Controlador VALUES ('K7234509', 'rio2');
+    INSERT INTO Controlador VALUES ('T8234509', 'des4');
+    INSERT INTO Controlador VALUES ('E9234509', 'mec2');
 
     INSERT INTO  Zona VALUES ('1A', 'norte', 'mgd2', 12004, 'piedra', 'abierto',2,500);
     INSERT INTO  Zona VALUES ('1B', 'sur', 'mgd2', 11004, 'arena', 'abierto',0,500);
