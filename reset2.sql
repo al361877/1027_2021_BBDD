@@ -92,9 +92,9 @@
         dni VARCHAR(9) not null,
         id_espacio VARCHAR(20) not null,
         días_semana_trabaja VARCHAR(13) not null;
-        CONSTRAINT ca_controlador_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE ,
-        CONSTRAINT cp_controlador PRIMARY KEY (dni, id_espacio),
-        CONSTRAINT ca_controlador_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE
+        CONSTRAINT ca_controlador_usuario FOREIGN KEY (dni) REFERENCES Usuario(dni)  ON DELETE RESTRICT ON UPDATE CASCADE,
+        CONSTRAINT ca_controlador_espacio FOREIGN KEY (id_espacio) REFERENCES EspacioPublico(id_espacio)  ON DELETE RESTRICT ON UPDATE CASCADE,
+        CONSTRAINT cp_controlador PRIMARY KEY (dni, id_espacio)
     );
 
 
