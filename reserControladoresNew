@@ -68,7 +68,8 @@ delete from RelacionRZ;
         CONSTRAINT cp_usuario PRIMARY KEY (dni),
         CONSTRAINT calt1_usuario UNIQUE (telefono),         --clave alternativa 1, será el telefono
         CONSTRAINT calt2_usuario UNIQUE (email),           --clave alternativa 2, será el correo electrónico
-        CONSTRAINT calt3_usuario UNIQUE (nombre_usuario) --clave alternativa 3, nombre de usuario
+        CONSTRAINT calt3_usuario UNIQUE (nombre_usuario), --clave alternativa 3, nombre de usuario
+        CONSTRAINT ri_nacimiento CHECK (EXTRACT(YEAR FROM AGE(nacimiento))>17)
     );
 
 
